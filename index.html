@@ -8,13 +8,13 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
-    //     window.onload = () => {                       
-    //         navigator.geolocation.getCurrentPosition((position) => {
-    //    //   document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
-    //      // document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: 40.677104050445806; longitude: -73.95116457003732;`)
-    //    //   document.querySelector('a-box').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
-    //     });
-    //    }
+        window.onload = () => {                       
+            navigator.geolocation.getCurrentPosition((position) => {
+       //   document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
+         // document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: 40.677104050445806; longitude: -73.95116457003732;`)
+          document.querySelector('a-box').setAttribute('gps-entity-place', "latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};");
+        });
+       }
       </script>
 </head>
 
@@ -35,6 +35,7 @@
         gps-entity-place="latitude: 40.67703776603319; longitude: -73.95119105684807;"
         scale="120 120 120"
         ></a-text>
+
       <a-box 
         color="blue"
         scale="10 10 10"
