@@ -18,7 +18,7 @@
       </script>
 </head>
 
-<!- 40.67703776603319, -73.95119105684807 ->
+<!-- 40.67703776603319, -73.95119105684807 -->
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
@@ -31,15 +31,16 @@
 
        <a-text
         value="This content will always face you."
+        look-at="[gps-camera]"
         gps-entity-place="latitude: 40.67703776603319; longitude: -73.95119105684807;"
         scale="120 120 120"
-      ></a-text>
+        ></a-text>
       <a-box 
         color="blue"
         scale="10 10 10"
         position="10 0 10"
         rotation="0 180 25" 
         gps-entity-place="latitude: 40.67703776603319; longitude: -73.95119105684807;"
-        />
+        ></a-box>
 	</a-scene>
 </body>
