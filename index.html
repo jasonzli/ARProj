@@ -10,12 +10,14 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+    <!-- include ar.js -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
         window.onload = () => {                       
             navigator.geolocation.getCurrentPosition((position) => {
        //   document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
-          document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: 40.677104050445806; longitude: -73.95119716989893;`)
-          document.querySelector('a-box').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
+         // document.querySelector('a-text').setAttribute('gps-entity-place', `latitude: 40.677104050445806; longitude: -73.95119716989893;`)
+       //   document.querySelector('a-box').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
         });
        }
       </script>
@@ -25,13 +27,19 @@
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-text
+        arjs='sourceType: webcam; debugUIEnabled: false;'
+        >
+
+       <a-text
         value="This content will always face you."
-        look-at="[gps-camera]"
+        gps-entity-place="latitude: 40.677104050445806; longitude: -73.95119716989893;"
         scale="120 120 120"
       ></a-text>
-      <a-box color="yellow"/>
+      <a-box 
+        color="yellow"
+        scale="10 10 10"
+        gps-entity-place="latitude: 40.677104050445806; longitude: -73.95119716989893;"
+        />
         <a-camera gps-camera rotation-reader></a-camera>
 	</a-scene>
 </body>
