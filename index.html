@@ -6,12 +6,17 @@
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
          // var box = ;
-          document.querySelector('a-box').box.setAttribute('position', '0 0 0');
-          document.querySelector('a-marker').prepend(box);
-        console.log("markerFound");
+         window.location("https://www.google.com");
       });
     }
   });
+  window.addEventListener('load', function () {
+    var scene = document.querySelector('a-scene');
+    scene.addEventListener('markerFound', function () {
+      console.log('markerFound');
+    });
+  });
+
 </script>
 
 <body style="margin : 0px; overflow: hidden;">
