@@ -5,11 +5,10 @@
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
-          var box = document.querySelector('a-box');
-          box.setAttribute('position', `0 0 0`);
+         // var box = ;
+          document.querySelector('a-box').box.setAttribute('position', '0 0 0');
           document.querySelector('a-marker').prepend(box);
-          
-      
+        console.log("markerFound");
       });
     }
   });
