@@ -2,14 +2,6 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <script>
-  AFRAME.registerComponent('markerhandler', {
-    init: function () {
-      this.el.sceneEl.addEventListener('markerFound', () => {
-         // var box = ;
-         window.location("https://www.google.com");
-      });
-    }
-  });
   window.addEventListener('load', function () {
     var scene = document.querySelector('a-scene');
     scene.addEventListener('markerFound', function () {
