@@ -25,10 +25,18 @@
       </a-assets>
 
     <a-marker markerhandler preset = 'hiro'>
-      <a-entity gltf-model="#building-asset" scale="1 1 1" position="0 0 0" rotation="0 0 0" ></a-entity>
+
     </a-marker>
-    
-    <a-box position='1000 0.5 0' color="yellow"></a-box>
+    <a-entity 
+    gltf-model="#building-asset" 
+    scale="1 1 1" 
+    position="10 0 0" 
+    rotation="0 0 0" 
+  ></a-entity>
+    <a-box 
+      position='-10 0.5 0' 
+      color="yellow"
+    ></a-box>
 
     <a-entity camera></a-entity>
   </a-scene>
